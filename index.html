@@ -1,6 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
+    <meta property="og:title" content="21Z.is-a.dev"/>
+    <meta property="og:image" content="https://21z.pages.dev/images/avatar.png"/>
+    <meta property="og:description" content="stupid website with stupid stuff made by a stupid person"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Under Development</title>
@@ -34,46 +38,5 @@
         <h1>Hi there!</h1>
         <p>This page is currently under development.</p>
     </div>
-<span id="button1" style="position:relative;z-index:10"></span>
-
-<script>
-var btnbgcol="lightgreen"
-var fntcol="black"
-var ok=(document.getElementById||document.all)?1:0
-if (ok)
-var cross_el=document.getElementById? document.getElementById("button1"):button1
-
-message = Don't click me
-var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
-
-function changeIt(){
-if (!ok)
-return
-cross_el.innerHTML='<button style="background-color:'+btnbgcol+'" onmouseDown="moveIt();" onmouseOver="moveIt()">'+message+'</button>'
-}
-
-function setRandom(){
-random1=Math.floor(Math.random()*301)
-random2=Math.floor(Math.random()*401)
-
-}
-
-function moveIt(){
-if (!ok)
-return
-setRandom()
-cross_el.style.top=random1+'px'
-cross_el.style.left=random2+'px'
-
-if (document.all){
-if (cross_el.offsetTop-standardbody.scrollTop>standardbody.clientHeight)
-cross_el.style.top=random1*(-2/3)+'px'
-}
-else{
-if (cross_el.offsetTop-window.pageYOffset>window.innerHeight)
-cross_el.style.top=random1*(-2/3)+'px'
-}
-<body onLoad="changeIt();" onClick="moveIt();">
-}
 </script></body>
 </html>
